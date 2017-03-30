@@ -1,22 +1,22 @@
 
-// Константы размеров
+// Size constants
 $borberWidth: 2px;
 $faceSize: 150px;
 $eyeSizeRelative: 0.3;
 $eyesSpaceRelative: 0.1;
 
-// Расчет позиций глаз
+// Eye positions
 $eyeSize: $faceSize * $eyeSizeRelative;
 $eyesSpace: $faceSize * $eyesSpaceRelative;
 $eyeLeftX: $faceSize / 2 - $eyesSpace / 2 - $eyeSize;
 $eyeRightX: $faceSize / 2 + $eyesSpace / 2;
 
-// Константы appContainer
+// appContainer constants
 $APP_WIDTH: 1100px;
 $APP_HEIGHT: 600px;
 $APP_COLOR: #f5f5f5;
 
-// Расчет размера коробки
+// Box size
 $boxSize: $faceSize * 1.2;
 
 @mixin smileBase() {
