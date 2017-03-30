@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Task</title>
+    <link rel="stylesheet" type="text/css" href="build/css/main.css" />
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script>
+    <script src="build/js/app.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var smile = new Smile();
+            var box = new Box();
+
+            smile.box = box;
+
+            $('.draggable').draggabilly({
+                containment: true
+            })
+        });
+    </script>
+
+    <div id="appContainer">
+    </div>
+
+</body>
+</html>
+
