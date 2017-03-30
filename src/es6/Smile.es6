@@ -8,6 +8,10 @@ export class Smile extends DisplayObject {
         this.colors = ["#ffcc00", "#ff5500"];
         this.colorIndex = 0;
 
+        $(this.html).on('dragStart', () => {
+            this.onDragStart();
+        });
+
         $(this.html).on('dragEnd', () => {
             this.onDragEnd();
         });
@@ -17,7 +21,14 @@ export class Smile extends DisplayObject {
         });
     }
 
+    onDragStart() {
+        this.html.style.zIndex = 1;
+        this.html.style['pointer-events'] = 'none';
+    }
+
     onDragEnd() {
+        this.html.style['pointer-events'] = '';
+
         if (this.box.readyForDrop()) {
             this.box.placeSmile(this);
         }

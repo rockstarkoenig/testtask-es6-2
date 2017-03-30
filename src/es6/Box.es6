@@ -30,6 +30,9 @@ export class Box extends DisplayObject {
 
         smile.html.style.left = rectBox.left + rectBox.width / 2 - rectSmile.width / 2 + 'px';
         smile.html.style.top = rectBox.top - rectSmile.height * 0.2 + 'px';
+
+        this.html.style.zIndex = 1;
+        smile.html.style.zIndex = 0;
     }
 
     readyForDrop() {
